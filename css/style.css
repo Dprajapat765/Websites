@@ -6,6 +6,37 @@
     --light: #DFE4FD;
     --dark: #011A41;
 }
+.float{
+    position: fixed;
+    width: 3.3rem;
+    height: 3.3rem;
+    bottom: 10rem;
+    left: 0px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+    z-index: 100;
+}
+.float2{
+    position: fixed;
+    width: 3.3rem;
+    height: 3.3rem;
+    bottom: 6.2rem;
+    background-color: #1e3050;
+    color: #FFF;
+    left: 0px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+    z-index:100;
+}
+
+.my-float{
+    margin-top:16px;
+}
+
 
 .back-to-top {
     position: fixed;
