@@ -6,12 +6,20 @@
     --light: #DFE4FD;
     --dark: #011A41;
 }
+.service-img-icon{
+    margin-bottom: 25px;
+    height: 100px;
+    width: 100px;
+}
+.service-box-size{
+    height: 30rem;
+}
 .float{
     position: fixed;
     width: 3.3rem;
     height: 3.3rem;
     bottom: 10rem;
-    left: 0px;
+    left: 10px;
     background-color: #25d366;
     color: #FFF;
     border-radius: 50%;
@@ -24,9 +32,9 @@
     width: 3.3rem;
     height: 3.3rem;
     bottom: 6.2rem;
-    background-color: #1e3050;
+    background-color: #355EFC;
     color: #FFF;
-    left: 0px;
+    left: 10px;
     border-radius: 50%;
     text-align: center;
     font-size: 1.4rem;
