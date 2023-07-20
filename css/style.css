@@ -285,7 +285,7 @@ h6,
 /*** Feature ***/
 .feature .feature-box,
 .feature .feature-box * {
-    transition: .5s;
+    transition: .2s;
 }
 
 .feature .feature-box:hover {
