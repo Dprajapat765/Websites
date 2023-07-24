@@ -33,13 +33,18 @@
 .service-img-icon{
     margin-bottom: 25px;
 }
-
 @media only screen and (min-width: 992px) {
     .service-box-size{
         height: 30rem;
     }
 }
 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .service-box-size{
+        height: 25rem;
+    }
+}
 
 
 
