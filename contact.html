@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +62,7 @@
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <a href="index.php" class="navbar-brand ms-4 ms-lg-0">
                 <h1 class="display-5 text-primary m-0">Naveen Associates</h1>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
@@ -70,10 +71,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="contact.php" class="nav-item nav-link active">Contact</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="https://www.facebook.com/profile.php?id=100086761719157&mibextid=ZbWKwL">
@@ -110,52 +111,54 @@
     <!-- Contact Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Contact</p>
-                    <h1 class="display-5 mb-4">If You Have Any Query, Please Contact Us</h1>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+            <form method="post">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Contact</p>
+                        <h1 class="display-5 mb-4">If You Have Any Query, Please Contact Us</h1>
+                        <form method="post" action="http://lookatyoursite.great-site.net/contact-sub.php">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" name="contact_name" required="">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" name="contact_email" required="">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Mobile" name="contact_mobile" required="">
+                                        <label for="subject">Mobile</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="contact_msg" required=""
+                                            style="height: 100px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary py-3 px-5" type="submit" name="submit">Send Message</button>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                        style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
+                        <div class="position-relative rounded overflow-hidden h-100">
+                            <iframe class="position-relative w-100 h-100"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221.059940264616!2d76.61677088698093!3d27.56378151581511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39729989e30c966f%3A0x5256f8e3936d9d50!2sASC%20ACADEMY%20II%20Best%20Coaching%20in%20Alwar%20II%20SSC%2C%20BANK%2C%20POLICE%2C%20RAILWAY!5e0!3m2!1sen!2sin!4v1690527904066!5m2!1sen!2sin"
+                                frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                                tabindex="0"></iframe>
                         </div>
-                    </form>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
-                    <div class="position-relative rounded overflow-hidden h-100">
-                        <iframe class="position-relative w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                            frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <!-- Contact End -->
@@ -209,23 +212,23 @@
                     </p>
                     <p class="mb-2">
                         <i class="fa fa-envelope me-3"></i>
-                        <a href="mailto:contact@naveenassociates.in" style="color:white;">contact@naveenassociates.in</a>
+                        <a href="mailto:contact@naveenassociates.in" style="color:white;font-size: 0.92rem;">contact@naveenassociates.in</a>
                     </p>
                     
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <h4 class="text-white mb-4">Services</h4>
-                    <a class="btn btn-link" href="service.html">Home Loan</a>
-                    <a class="btn btn-link" href="service.html">Personal Loan</a>
-                    <a class="btn btn-link" href="service.html">Mortgage Loan</a>
-                    <a class="btn btn-link" href="service.html">Loan Against Property</a>
-                    <a class="btn btn-link" href="service.html">Business Loan</a>
+                    <a class="btn btn-link" href="service.php">Home Loan</a>
+                    <a class="btn btn-link" href="service.php">Personal Loan</a>
+                    <a class="btn btn-link" href="service.php">Mortgage Loan</a>
+                    <a class="btn btn-link" href="service.php">Loan Against Property</a>
+                    <a class="btn btn-link" href="service.php">Business Loan</a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="service.html">Our Services</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
+                    <a class="btn btn-link" href="service.php">Our Services</a>
                     <a class="btn btn-link" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSexfbksBozTZQuHb1mi4SPgLBdBtv7ObNgmmfKAFLZiv3aJiQ/viewform?usp=sf_link">Careers</a>
                 </div>
             </div>
@@ -240,7 +243,7 @@
             <div class="row">
                 <div class="col-md-2 offset"></div>
                 <div class="col-md-8 text-center" style="text-align:  center;">
-                    &copy; 2023 | <a class="border-bottom" href="index.html">Naveen Associates</a> All Right Reserved.
+                    &copy; 2023 | <a class="border-bottom" href="index.php">Naveen Associates</a> All Right Reserved.
                 </div>
                 <div class="col-md-2 offset"></div>
             </div>
