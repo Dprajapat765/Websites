@@ -31,10 +31,9 @@
     <!-- Audio file for the notification sound -->
     <audio id="notificationSound" src="scanner-beep.mp3"></audio>
 
-    <script src="html5-qrcode-master/minified//html5-qrcode.min.js"></script>
+    <script src="html5-qrcode-master/minified/html5-qrcode.min.js"></script>
     <script>
         const qrCodeReader = new Html5Qrcode("qr-reader");
-        let isUrlOpened = false;
 
         function onScanSuccess(qrCodeMessage) {
             // Play notification sound
@@ -46,10 +45,9 @@
             // Extract URL from the QR code message
             const url = extractURL(qrCodeMessage);
 
-            // Open the URL in a new tab (only once)
-            if (url && !isUrlOpened) {
-                window.open(url);
-                isUrlOpened = true;
+            // Open the URL in the same tab
+            if (url) {
+                window.location.href = url;
             }
         }
 
