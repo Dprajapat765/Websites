@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #qr-reader {
+            width: 300px;
+            margin: 0 auto;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>QR Code Scanner</h1>
+
+    <div id="qr-reader"></div>
+    <div id="result"></div>
+
+    <!-- Audio file for the notification sound -->
+    <audio id="notificationSound" src="/Users/dprajapat/Downloads/scanner-beep.mp3"></audio>
+
+    <script src="/Users/dprajapat/Downloads/html5-qrcode-master/minified//html5-qrcode.min.js"></script>
+    <script>
+        const qrCodeReader = new Html5Qrcode("qr-reader");
+        let isUrlOpened = false;
+
+        function onScanSuccess(qrCodeMessage) {
+            // Play notification sound
+            playNotificationSound();
+
+            // Display the result
+            displayResult(qrCodeMessage);
+
+            // Extract URL from the QR code message
+            const url = extractURL(qrCodeMessage);
+
+            // Open the URL in a new tab (only once)
+            if (url && !isUrlOpened) {
+                window.open(url, "_blank");
+                isUrlOpened = true;
+            }
+        }
+
+        function playNotificationSound() {
+            const audio = document.getElementById("notificationSound");
+            audio.play();
+        }
+
+        function displayResult(result) {
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `Scanned QR Code: ${result}`;
+        }
+
+        function extractURL(qrCodeMessage) {
+            const urlRegex = /(https?:\/\/[^\s]+)/;
+            const match = qrCodeMessage.match(urlRegex);
+            return match ? match[0] : null;
+        }
+
+        // Start scanning
+        qrCodeReader.start(
+            { facingMode: "environment" },  // Use the rear camera if available
+            { fps: 10 },
+            onScanSuccess
+        );
+
+        // Stop scanning when leaving the page
+        window.addEventListener("beforeunload", () => {
+            qrCodeReader.stop();
+        });
+    </script>
+
+</body>
+</html>
