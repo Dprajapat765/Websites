@@ -235,23 +235,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <form id="contact-form" class="contact-form-box" data-sal="slide-left"
-                                data-sal-duration="1000" data-sal-delay="300">
+                            <form onsubmit="emailSend(); reset();" id="contact-form" class="contact-form-box" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="300">
                                 <div class="form-input">
                                     <label>Your Name</label>
-                                    <input type="text" class="form__input" name="conName" required="" />
+                                    <input type="text" class="form__input" name="conName" id="conName" required="" />
                                 </div>
                                 <div class="form-input">
                                     <label>Email Address</label>
-                                    <input type="email" class="form__input" name="conEmail" required=""/>
+                                    <input type="email" class="form__input" name="conEmail" id="conEmail" required=""/>
                                 </div>
                                 <div class="form-input">
                                     <label>Contact Number</label>
-                                    <input type="text" class="form__input" name="conMobile" required=""/>
+                                    <input type="text" class="form__input" name="conMobile" id="conMobile" required=""/>
                                 </div>
                                 <div class="form-textarea">
                                     <label>How can help you?</label>
-                                    <textarea id="message" name="conMessage" required="">
+                                    <textarea id="conMessage" name="conMessage" id="conMessage">
                                         
                                     </textarea>
                                 </div>
@@ -484,6 +483,10 @@
     <script src="assets/js/validate.min.js"></script>
 
     <script src="assets/js/main.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="send_mail.js"></script>
 </body>
 
 </html>
